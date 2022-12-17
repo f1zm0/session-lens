@@ -1,6 +1,7 @@
 local Lib = require('telescope._extensions.session-lens.session-lens-library')
 local AutoSession = require('auto-session')
 local SessionLensActions = require("telescope._extensions.session-lens.session-lens-actions")
+local ts_config = require('telescope.config')
 
 ----------- Setup ----------
 local SessionLens = {
@@ -9,7 +10,11 @@ local SessionLens = {
 
 local defaultConf = {
   theme = { 'dropdown' },
-  theme_conf = { winblend = 10, border = true },
+  theme_conf = {
+    winblend = 10,
+    border = true,
+    borderchars = ts_config.values.borderchars,
+  },
   previewer = false
 }
 
